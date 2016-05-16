@@ -1,0 +1,18 @@
+
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <ul class="media-list">
+            <li class="media" ng-repeat="user in testValue=(users | filter:{logged:true} | filter:{$id: '!' + userId})">
+                <a class="plain-link" href="#/chat/{{user.$id}}">
+                    <div class="media-body">
+                        <h4 class="media-heading"><strong>{{user.name}}</strong></h4>
+                        <p>{{user.logged}}</p>
+                    </div>
+                </a>
+                <hr/>
+            </li>
+        </ul>
+        <p ng-show="!testValue.length">No available users</p>
+    </div>
+</div>
+

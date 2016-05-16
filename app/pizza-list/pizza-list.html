@@ -1,0 +1,27 @@
+<div class="row map-row">
+    <div class="col-xs-12 col-md-8 map-container">
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" >
+            <ui-gmap-markers models="pizzaMarkers" coords="'self'" icon="'icon'" >
+                <ui-gmap-windows show="show">
+                    <div ng-non-bindable>{{title}}</div>
+                </ui-gmap-windows>
+            </ui-gmap-markers>
+        </ui-gmap-google-map>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <ul class="media-list">
+            <li class="media" ng-repeat="pizza in pizzas | orderBy:orderProp">
+                <a class="plain-link" href="#/pizzas/{{pizza.$id}}">
+                    <div class="media-left">
+                        <img class="media-object" ng-src="{{pizza.image}}" alt="{{pizza.name}}">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading"><strong>{{pizza.name}}</strong></h4>
+                        <p>{{pizza.pizzeria}}</p>
+                    </div>
+                </a>
+                <hr/>
+            </li>
+        </ul>
+    </div>
+</div>

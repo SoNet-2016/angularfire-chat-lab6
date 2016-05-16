@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form id="frmPizza" role="form" ng-submit="addNewPizza()">
+            <div class="page-header">
+                <h2>Add New Pizza</h2>
+             </div>
+
+            <div class="form-group">
+                <label for="txtName">Name</label>
+                <input type="text" class="form-control" id="txtName" placeholder="Enter pizza name" name="pizzaName" ng-model="pizza.name" />
+            </div>
+            <div class="form-group">
+                <label for="txtPlace">Pizzeria</label>
+                <input type="text" class="form-control" id="txtPlace" placeholder="Pizzeria" name="pizzeria" ng-model="pizza.pizzeria" />
+            </div>
+            <div class="form-group">
+                <label for="txtAddress">Address</label>
+                <input type="text" class="form-control" id="txtAddress" placeholder="Street and City" name="address" ng-model="pizza.address" />
+            </div>
+            <div class="form-group">
+                <label for="imgPizza">Photo</label>
+                <button type="file" class="btn btn-default btn-lg" id="imgPizza" ng-model="pizza.img" ngf-accept="'image/*'" ngf-capture="camera" ngf-select="add()" >
+                    <span class="glyphicon glyphicon-camera"></span>
+                </button>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add</button>
+        </form>
+    </div>
+</div>
+
+<div class="row preview" ng-if="pizza.img">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Preview</div>
+            <div class="panel-body">
+                <img class="center-block" ngf-thumbnail="pizza.img" ngf-size="{width: 300, quality: 0.9}" />
+            </div>
+        </div>
+    </div>
+</div>

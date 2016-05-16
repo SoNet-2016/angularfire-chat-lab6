@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="page-header">
+            <h1>{{ pizza.name }}</h1>
+            <uib-rating class="star-color star-large" ng-model="pizza.rating.value" aria-labelledby="default-rating" ng-click="setRating()" read-only="voteSaved"></uib-rating>
+            <span class="label label-success" ng-if="voteSaved">Thanks!</span>
+        </div>
+    </div>
+</div>
+
+<div class="row map-row">
+    <div class="col-xs-12 col-md-4">
+        <img class="img-responsive img-circle center-block" ng-src="{{pizza.image}}" alt="{{pizza.name}}" >
+    </div>
+
+    <div class="col-xs-12 col-md-8 map-container">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{pizza.pizzeria}}</div>
+            <div class="panel-body">
+                <address>{{ pizza.address }}</address>
+            </div>
+        </div>
+
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" >
+            <ui-gmap-marker coords="marker.coords" idkey="0">
+            </ui-gmap-marker>
+        </ui-gmap-google-map>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.media-object {
+    width: 100px;
+}
+
+a.plain-link, a.plain-link:focus, a.plain-link:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+/* GMaps responsive */
+.map-container {
+    height: 75%;
+    padding-bottom: 25px;
+}
+
+.container-fluid, .map-row,
+.angular-google-map, .angular-google-map-container {
+    height: 100%;
+}
+
+ html, body {
+     height: 100%;
+ }

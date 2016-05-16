@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="page-header">
+            <h1>{{user.name}} {{user.surname}}</h1>
+        </div>
+        <p>
+            <span class="glyphicon glyphicon-envelope"></span> {{user.email}}
+        </p>
+
+        <p>
+            <button class="center-block btn btn-danger" ng-click="logout();auth.$unauth();">Logout</button>
+        </p>
+    </div>
+
+</div>

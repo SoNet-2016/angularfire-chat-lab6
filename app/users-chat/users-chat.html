@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div id="messagesDiv">
+            <div ng-repeat="msg in messages  | orderBy:orderProp" ng-if="[userId, interlocutorId].indexOf(msg.sender) > -1 && [userId, interlocutorId].indexOf(msg.receiver) > -1 ">
+                <em>{{msg.utctime}} - {{msg.senderName}}</em>: {{msg.text}}
+            </div>
+        </div>
+        {{userInfo.name}}: <input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">
+    </div>
+</div>
+

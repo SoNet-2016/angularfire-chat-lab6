@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="pizzApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="pizzApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="pizzApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="pizzApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pizza++: a Social Network for Pizza's Lovers</title>
+  <meta name="description" content="pizza, social network">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-title" content="Pizza++">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/touch-icon-ipad-retina.png">
+
+  <!-- Android -->
+  <link rel="manifest" href="../manifest.json">
+
+  <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="app.css"/>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+  <!--[if lt IE 7]>
+      <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <header class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+
+          <div class="navbar-header">
+              <ul class="nav navbar-nav pull-left">
+                  <li class="foreground" show-back-button>
+                      <a href="" back-button><span class="glyphicon glyphicon-chevron-left"></span></a>
+                  </li>
+              </ul>
+
+              <h1 class="navbar-brand">Pizza++</h1>
+          </div>
+      </div>
+  </header>
+
+  <div class="container-fluid" id="main" ng-view ng-cloak></div>
+
+  <footer class="navbar navbar-default navbar-fixed-bottom" nav-menu>
+      <div class="container-fluid">
+              <ul class="nav navbar-nav navbar-center">
+                  <li><a href="#/pizzas"><span class="glyphicon glyphicon-home"></span></a></li>
+                  <li><a href="#/new"><span class="glyphicon glyphicon-plus"></span></a></li>
+                  <li><a href="#/profile"><span class="glyphicon glyphicon-user"></span></a></li>
+                  <li><a href="#/chat"><span class="glyphicon glyphicon-comment"></span></a></li>
+              </ul>
+      </div>
+  </footer>
+
+  <!-- Angular -->
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="../lib/angular/angular.min.js"></script>
+  <script src="../lib/angular/angular-route.min.js"></script>
+  <script src="../lib/angular/angular-resource.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../lib/bootstrap/ui-bootstrap-tpls-1.3.1.min.js"></script>
+  <!-- File Upload -->
+  <script src="../lib/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+  <script src="../lib/ng-file-upload.min.js"></script>
+  <!-- Google Maps -->
+  <script src="../lib/google-maps/lodash.js"></script>
+  <script src="../lib/google-maps/angular-simple-logger.js"></script>
+  <script src="../lib/google-maps/angular-google-maps.min.js"></script>
+  <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+  <!-- iOS bouncing fix -->
+  <script src="../lib/inobounce.min.js"></script>
+  <!-- App -->
+  <script src="app.js"></script>
+  <script src="login/login.js"></script>
+  <script src="pizza-list/pizza-list.js"></script>
+  <script src="pizza-detail/pizza-detail.js"></script>
+  <script src="pizza-creation/pizza-creation.js"></script>
+  <script src="user-profile/user-profile.js"></script>
+  <script src="users-list/users-list.js"></script>
+  <script src="users-chat/users-chat.js"></script>
+  <script src="components/pizza/pizza.js"></script>
+  <script src="components/pizza/pizza-service.js"></script>
+  <script src="components/pizza/pizza-rating-service.js"></script>
+  <script src="components/users/users.js"></script>
+  <script src="components/users/users-chat-login-service.js"></script>
+  <script src="components/users/users-service.js"></script>
+  <script src="components/users/users-chat-service.js"></script>
+  <script src="components/navigation/navigation.js"></script>
+  <script src="components/navigation/back-directive.js"></script>
+  <script src="components/navigation/nav-menu-directive.js"></script>
+</body>
+</html>
