@@ -64,7 +64,7 @@
 
         ```
 
-    6. A questo punto dobbiamo richiamare la funzione _registerLogin_ quando l'utente effettua il login. Quindi andiamo in /app/login/login.js ed la modifichiamo in questo modo:
+    6. A questo punto dobbiamo richiamare la funzione _registerLogin_ quando l'utente effettua il login. Quindi andiamo in /app/login/login.js e la modifichiamo in questo modo:
 
         ```
         'use strict';
@@ -179,7 +179,7 @@
     Il controller si preoccupa di caricare la lista degli utenti in una variabile "users".
     ATTENZIONE: non dimentichiamo di dichiare la dipendenza da questo modulo in app.js.
 
-    5. Creiamo la pagina html caricata dal modulo in _app/users-list/users-list.html_ ed usiamo i filtri per far stampare solo gli utenti loggati e, chiaramente, non se stessi.
+    5. Creiamo la pagina html associata in _app/users-list/users-list.html_ ed usiamo i filtri per far stampare solo gli utenti loggati e, chiaramente, non se stessi.
         ```
         <div class="row">
             <div class="col-xs-12 col-md-4">
@@ -227,7 +227,7 @@
                      text: "ciao"
                      utctime:  "2016-05-16-09:45:52"
         ```
-    2. Creiamo un nuovo servizio (app/components/users/users-chat-service.js)per inserire un nuovo messaggio alla chat e per ottenere i messaggi esistenti
+    2. Creiamo un nuovo servizio (app/components/users/users-chat-service.js) per inserire un nuovo messaggio alla chat e per ottenere i messaggi esistenti
         ```
         'use strict';
 
