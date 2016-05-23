@@ -355,3 +355,5 @@
         ```
 
     6. aggiungiamo le dipendenze in app.js e in index.html
+	
+	
